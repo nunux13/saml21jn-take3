@@ -104,16 +104,16 @@ static const spi_conf_t spi_config[] = {
 #define I2C_3_EN            0
 #define I2C_IRQ_PRIO        1
 
-#define I2C_0_DEV           SERCOM3->I2CM
-#define I2C_0_IRQ           SERCOM3_IRQn
-#define I2C_0_ISR           isr_sercom3
+#define I2C_0_DEV           SERCOM1->I2CM
+#define I2C_0_IRQ           SERCOM1_IRQn
+#define I2C_0_ISR           isr_sercom1
 /* I2C 0 GCLK */
-#define I2C_0_GCLK_ID       SERCOM3_GCLK_ID_CORE
-#define I2C_0_GCLK_ID_SLOW  SERCOM3_GCLK_ID_SLOW
+#define I2C_0_GCLK_ID       SERCOM1_GCLK_ID_CORE
+#define I2C_0_GCLK_ID_SLOW  SERCOM1_GCLK_ID_SLOW
 /* I2C 0 pin configuration */
 #define I2C_0_SDA           GPIO_PIN(PA, 16)
 #define I2C_0_SCL           GPIO_PIN(PA, 17)
-#define I2C_0_MUX           GPIO_MUX_D
+#define I2C_0_MUX           GPIO_MUX_C
 /** @} */
 
 /**
@@ -139,7 +139,7 @@ static const spi_conf_t spi_config[] = {
  * @name ADC Configuration
  * @{
  */
-#define ADC_NUMOF                          (3U)
+#define ADC_NUMOF                          (1U)
 
 /* ADC 0 Default values */
 #define ADC_0_CLK_SOURCE                   0 /* GCLK_GENERATOR_0 */
