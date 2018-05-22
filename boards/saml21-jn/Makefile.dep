@@ -1,0 +1,4 @@
+ifneq (,$(filter gnrc_netdev_default netdev_default,$(USEMODULE)))
+  USEMODULE += mrf24j40
+  USEMODULE_INCLUDES += $(RIOTBASE)/drivers/mrf24j40/include
+endif
